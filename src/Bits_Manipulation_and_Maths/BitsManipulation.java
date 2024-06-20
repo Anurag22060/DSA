@@ -92,11 +92,11 @@ public class BitsManipulation {
         return  ans;
     }
 
-    static int xorQueries(int a[],int l,int r){
-        int xor[] = new int[a.length];
-        xor[0] = a[0];
-        for (int i = 1; i <a.length ; i++) {
-            xor[i] =
-        }
-    }
+//    static int xorQueries(int a[],int l,int r){
+//        int xor[] = new int[a.length];
+//        xor[0] = a[0];
+//        for (int i = 1; i <a.length ; i++) {
+//
+//        }
+//    }
 }
