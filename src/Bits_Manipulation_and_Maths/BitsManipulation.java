@@ -11,9 +11,13 @@ public class BitsManipulation {
 //        System.out.println(clearBitsInGivenRange(n,i,j));
 //        System.out.println(clearTheLastSetBit(n));
 //        System.out.println(countSetBit(n));
-            int a[]={1,2,3,1,2,5};
-            int ans[] = twoUniqueNumbers(a);
-        System.out.println(ans[0] + " "+ ans[1]);
+//            int a[]={1,2,3,1,2,5};
+//            int ans[] = twoUniqueNumbers(a);
+//        System.out.println(ans[0] + " "+ ans[1]);
+         int a[] = {1,3,4,8};
+         int l = 0;
+         int r = 3;
+        System.out.println(xorQueries(a,l,r));
     }
 
     static int getIthBit(int n,int i){
@@ -92,11 +96,14 @@ public class BitsManipulation {
         return  ans;
     }
 
-//    static int xorQueries(int a[],int l,int r){
-//        int xor[] = new int[a.length];
-//        xor[0] = a[0];
-//        for (int i = 1; i <a.length ; i++) {
-//
-//        }
-//    }
+    static int xorQueries(int a[],int l,int r){
+        int xor[] = new int[a.length];
+        xor[0] = a[0];
+        for (int i = 1; i <a.length ; i++) {
+            xor[i] = xor[i-1] ^ a[i];
+        }
+        int left = l == 0 ? 0: xor[l-1];
+        int right = xor[r];
+        return left ^ right;
+    }
 }
