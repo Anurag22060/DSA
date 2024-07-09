@@ -18,7 +18,7 @@ public class MakeMatrixEqual {
         if(n ==0) return  0;
         int total = n * m;
         int b[] = new int[total];
-
+//Convert matrix into array
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 b[i * m + j] = a[i][j];
@@ -40,7 +40,10 @@ public class MakeMatrixEqual {
     static int makeMatixHelper(int b[],int m,int k){
         int count = 0;
         for (int i = 0; i < b.length; i++) {
-            count += Math.abs(b[i] - m)/ k;
+            if( Math.abs(b[i] - m) % k != 0){ return -1;} // Check if b & m are divisible by k.
+            else{
+                count+= Math.abs(b[i] - m) / k;
+            }
         }
         return count;
     }
