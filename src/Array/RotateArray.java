@@ -26,8 +26,10 @@ public class RotateArray {
 
         int offset = k % n;
         for(int i=0;i<n;i++){
-
-            ans[i] = temp[i+(n-offset)];
+//            for left rotation
+            ans[i] = temp[i+(offset)];
+//            for right rotation
+//            ans[i] = temp[i+(n-offset)];
         }
         return ans;
     }

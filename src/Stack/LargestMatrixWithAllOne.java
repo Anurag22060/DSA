@@ -54,7 +54,7 @@ public class LargestMatrixWithAllOne {
         ArrayDeque<Integer> stack = new ArrayDeque<>();
 
         for (int i = 0; i < n; i++) {
-            while(!stack.isEmpty() && a[stack.peek()] >=     a[i]){
+            while(!stack.isEmpty() && a[stack.peek()] >= a[i]){
                 stack.pop();
             }
 
