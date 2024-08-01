@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class ImplementUpperBound {
+public class ImplementUpperBoundForUnSortedArray {
 
     public static void main(String[] args) {
         int x1 = 28;
